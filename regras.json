@@ -6,7 +6,8 @@
     "stepstone": true,
     "indeed": true,
     "linkedin": true,
-    "arbeitsagentur": true
+    "arbeitsagentur": true,
+    "karriere": true
   },
   "leitor": {
     "naoSalario": [],

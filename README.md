@@ -20,7 +20,7 @@ Job sites change how they write salaries without notice. This file lets the exte
 | `formato` | Always `1`; any other value makes the extension ignore the file | `1` |
 | `atualizado` | Date of the last change (YYYY-MM-DD) | `"2026-09-24"` |
 | `desligado` | `true` pauses the extension everywhere (emergency brake) | `false` |
-| `sites.stepstone` / `.indeed` / `.linkedin` / `.arbeitsagentur` | `false` pauses one site. New sites cannot be added here — that needs a new version with the site permission | `"linkedin": false` |
+| `sites.stepstone` / `.indeed` / `.linkedin` / `.arbeitsagentur` / `.karriere` | `false` pauses one site. New sites cannot be added here — that needs a new version with the site permission | `"linkedin": false` |
 | `leitor.naoSalario` | Extra words meaning "this euro amount is not a salary" | `["Umzugspauschale"]` |
 | `leitor.salario` | Extra words confirming a salary | `["Grundvergütung"]` |
 | `leitor.periodos.jahr` / `monat` / `woche` / `stunde` | Extra words for the pay period | `"jahr": ["jährl."]` |

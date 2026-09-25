@@ -2,7 +2,7 @@
 
 *English version below.*
 
-Stand: 25. September 2026
+Stand: 25. September 2026 (ergänzt: Österreich)
 
 ## Verantwortlicher
 
@@ -17,7 +17,7 @@ Netto-Radar berechnet Ihr Nettogehalt **vollständig lokal in Ihrem Browser**. I
 
 **1. Ihre Einstellungen.** Steuerklasse, Bundesland, Kirchensteuer, Kinder, Alter, Wochenstunden, Ihr aktuelles Gehalt und Ihr Mindest-Netto werden mit `chrome.storage.sync` im Browser gespeichert. Wenn Sie in Ihrem Browser die Synchronisierung eingeschaltet haben, gleicht der Browser-Hersteller (z. B. Google) diese Einstellungen zwischen Ihren Geräten ab – nach dessen Datenschutzbestimmungen. Wir erhalten diese Daten nie.
 
-**2. Lesen der Stellenseiten.** Auf StepStone, Indeed, LinkedIn Jobs und der Jobbörse der Bundesagentur für Arbeit liest die Erweiterung den Gehaltstext der Anzeigen, um daneben das Netto anzuzeigen. Auf anderen Seiten nur dann, wenn Sie dort selbst einen Betrag markieren und „Netto berechnen“ wählen. Der gelesene Text wird nur lokal verarbeitet und nicht übertragen.
+**2. Lesen der Stellenseiten.** Auf StepStone (.de und .at), Indeed, LinkedIn Jobs, der Jobbörse der Bundesagentur für Arbeit und karriere.at liest die Erweiterung den Gehaltstext der Anzeigen, um daneben das Netto anzuzeigen. Auf anderen Seiten nur dann, wenn Sie dort selbst einen Betrag markieren und „Netto berechnen“ wählen. Der gelesene Text wird nur lokal verarbeitet und nicht übertragen.
 
 **3. Regeldatei.** Zweimal täglich lädt die Erweiterung eine öffentliche Datei mit Wortlisten und Schaltern (`raw.githubusercontent.com/andradetkx/netto-radar-regeln`). Dabei werden keine Daten von Ihnen mitgeschickt; GitHub erhält wie bei jedem Abruf einer Webseite technisch Ihre IP-Adresse (Datenschutzerklärung von GitHub: https://docs.github.com/site-policy/privacy-policies).
 
@@ -43,7 +43,7 @@ Wenn Sie die Erweiterung entfernen, löscht der Browser alle lokal gespeicherten
 
 # Privacy Policy – Netto-Radar
 
-Last updated: 25 September 2026
+Last updated: 25 September 2026 (added: Austria)
 
 ## Controller
 
@@ -58,7 +58,7 @@ Netto-Radar calculates your net salary **entirely locally in your browser**. You
 
 **1. Your settings** are stored with `chrome.storage.sync`. If browser sync is on, your browser vendor (e.g. Google) syncs them between your devices under its own privacy policy. We never receive them.
 
-**2. Reading job pages.** On StepStone, Indeed, LinkedIn Jobs and the Federal Employment Agency job board, the extension reads the salary text of job ads to show the net amount next to it; on other pages only when you select an amount and choose "Calculate German net pay". This text is processed locally and not transmitted.
+**2. Reading job pages.** On StepStone (.de and .at), Indeed, LinkedIn Jobs, the Federal Employment Agency job board and karriere.at, the extension reads the salary text of job ads to show the net amount next to it; on other pages only when you select an amount and choose "Calculate German net pay". This text is processed locally and not transmitted.
 
 **3. Rules file.** Twice a day the extension downloads a public file of word lists and switches from `raw.githubusercontent.com/andradetkx/netto-radar-regeln`. No data of yours is sent; like any web request, GitHub technically receives your IP address (GitHub privacy statement: https://docs.github.com/site-policy/privacy-policies).
 
