@@ -1,40 +1,36 @@
-# Netto-Radar — regras
+# Netto-Radar – rules & privacy
 
-Este repositório tem **um arquivo só**, `regras.json`. A extensão Netto-Radar
-o baixa a cada 12 horas (e ao abrir o navegador) de:
+Public files for the **Netto-Radar** browser extension (German net salary next to the gross salary in job ads).
 
-    https://raw.githubusercontent.com/andradetkx/netto-radar-regeln/main/regras.json
+| File | What it is |
+|---|---|
+| [`DATENSCHUTZ.md`](DATENSCHUTZ.md) | Privacy policy / Datenschutzerklärung (DE/EN) |
+| [`regras.json`](regras.json) | Rules file the extension downloads every 12 hours |
 
-Serve para corrigir a extensão **sem publicar versão nova** na Chrome Web
-Store. Mudou aqui, deu `git push`: em até 12 horas vale para todo mundo. Para
-testar na hora no seu Chrome: `chrome://extensions` → ↻ na extensão (ela
-busca as regras ao ser recarregada).
+## Why a rules file?
 
-**Só dados, nunca código.** A loja proíbe executar código baixado. A extensão
-aceita apenas listas de palavras, números e liga/desliga, e **descarta em
-silêncio** tudo o que não se encaixa. JSON quebrado = ela usa as regras de
-fábrica, não quebra.
+Job sites change how they write salaries without notice. This file lets the extension adapt without a new store release — for example by learning a new word for "per year" or pausing support for one site while a fix is prepared.
 
-## Campos
+**Data only, never code.** The extension accepts nothing but word lists, numbers and on/off switches, validates every field and silently ignores anything else. A broken or missing file simply means the built-in defaults are used. No personal data is sent when the file is downloaded.
 
-| Campo | Para quê | Exemplo |
+## Fields
+
+| Field | Purpose | Example |
 |---|---|---|
-| `formato` | Sempre `1`. Outro valor = arquivo ignorado. | `1` |
-| `atualizado` | Data da última mudança (`AAAA-MM-DD`). Aparece nos ajustes e nos relatórios de problema. | `"2026-10-02"` |
-| `desligado` | `true` desliga a extensão inteira. Freio de emergência: ela passou a errar em massa. | `false` |
-| `sites.stepstone` / `.indeed` / `.linkedin` | `false` desliga um site só (ele mudou e a correção ainda não saiu). **Não dá para ligar site novo por aqui** — isso exige permissão, logo versão nova. | `"linkedin": false` |
-| `leitor.naoSalario` | Palavras que, num texto com euro, dizem que o valor NÃO é salário (além das de fábrica: Bonus, Zuschuss, Jobticket…). | `["Umzugspauschale"]` |
-| `leitor.salario` | Palavras que confirmam que é salário (além de Gehalt, Lohn, Vergütung…). | `["Grundvergütung"]` |
-| `leitor.periodos.jahr` etc. | Sinônimos novos de período. | `"jahr": ["jährl."]` |
-| `leitor.mensalMin` / `mensalMax` | Faixa plausível em € brutos por mês (100–2.000 / 10.000–100.000). | `300` / `40000` |
-| `leitor.faixaMaxRazao` | Faixa mais larga que isto (máx ÷ mín) é chute e é ignorada (1,5–10). | `3` |
-| `lugares.adicionar` | Lugar de fora da Alemanha que faltou: `"Nome": "CH"`, `"AT"`, `"LI"` ou `"X"`. | `{"Pfäffikon": "CH"}` |
-| `lugares.remover` | Lugar marcado como estrangeiro por engano (existe na Alemanha). | `["Baden"]` |
-| `contato` | E-mail que recebe o "Problem melden". `null` = o botão some. | `"nettoradar@…"` |
+| `formato` | Always `1`; any other value makes the extension ignore the file | `1` |
+| `atualizado` | Date of the last change (YYYY-MM-DD) | `"2026-09-24"` |
+| `desligado` | `true` pauses the extension everywhere (emergency brake) | `false` |
+| `sites.stepstone` / `.indeed` / `.linkedin` / `.arbeitsagentur` | `false` pauses one site. New sites cannot be added here — that needs a new version with the site permission | `"linkedin": false` |
+| `leitor.naoSalario` | Extra words meaning "this euro amount is not a salary" | `["Umzugspauschale"]` |
+| `leitor.salario` | Extra words confirming a salary | `["Grundvergütung"]` |
+| `leitor.periodos.jahr` / `monat` / `woche` / `stunde` | Extra words for the pay period | `"jahr": ["jährl."]` |
+| `leitor.mensalMin` / `mensalMax` | Plausible gross monthly range in € | `300` / `40000` |
+| `leitor.faixaMaxRazao` | Ranges wider than this (max ÷ min) are ignored | `3` |
+| `lugares.adicionar` / `lugares.remover` | Places outside Germany (`CH`, `AT`, `LI`, `X`) added or removed | `{"Pfäffikon": "CH"}` |
+| `contato` | Address for "Report a problem"; `null` hides the button | `"…@…"` |
 
-Palavras: 2 a 40 caracteres, só letras, dígitos, espaço e `. / - ' €`. Até
-100 por lista. Maiúscula e minúscula tanto faz.
+Words: 2–40 characters (letters, digits, space and `. / - ' €`), up to 100 per list, case-insensitive.
 
-## Datenschutz / Privacy
+## Contact
 
-[DATENSCHUTZ.md](DATENSCHUTZ.md) — Datenschutzerklärung der Erweiterung (DE/EN).
+mauezx@gmail.com
