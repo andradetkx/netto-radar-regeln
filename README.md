@@ -34,3 +34,7 @@ fábrica, não quebra.
 
 Palavras: 2 a 40 caracteres, só letras, dígitos, espaço e `. / - ' €`. Até
 100 por lista. Maiúscula e minúscula tanto faz.
+
+## Datenschutz / Privacy
+
+[DATENSCHUTZ.md](DATENSCHUTZ.md) — Datenschutzerklärung der Erweiterung (DE/EN).
