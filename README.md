@@ -5,7 +5,7 @@ Public files for the **Netto-Radar** browser extension (German net salary next t
 | File | What it is |
 |---|---|
 | [`DATENSCHUTZ.md`](DATENSCHUTZ.md) | Privacy policy / Datenschutzerklärung (DE/EN) |
-| [`regras.json`](regras.json) | Rules file the extension downloads every 12 hours |
+| [`regras.json`](regras.json) | Rules file the extension downloads every 12 hours from `https://raw.githubusercontent.com/andradetkx/netto-radar-regeln/main/regras.json` |
 
 ## Why a rules file?
 
